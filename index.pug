@@ -5,4 +5,66 @@ html
     title Project 2
     link(rel="stylesheet" href="css/style.css")
   body
-    h1 Project 1
+    // Header
+    header: .container
+      .logo
+        a(href="/"): img(src="images/logo.svg" alt="Bose")
+      // Navigation
+      nav
+        ul
+          li: a(href="/headphones") Headphones
+          li: a(href="/speakers") Speakers
+          li: a(href="/best") Best with Bose
+          li: a(href="/support") Support
+      // Search
+      .search
+        input(type="text" placeholder="Search...")
+
+    main
+      section#photo
+        // Photo
+      section#buy
+        // Basic description and Buy button
+        h1 SoundTrue around-ear headphones II
+        p Engineered for your music. Designed for your style.
+        // Rating
+        .rating
+          h3 Customers rating
+          p * * * * -
+
+        // Choose color
+        fieldset.color
+          input(type="radio" name="color" value="black" id="black")
+          label(for="black") Charcoal Black
+
+          input(type="radio" name="color" value="navy" id="navy")
+          label(for="navy") Navy Blue
+        // Price
+        .price
+          p $99.95
+          p In stock
+        
+        a(href="buy") Buy now
+
+      section.parallax
+
+      // Overview
+      section#overview
+        h2 Overview
+
+      // Specs
+      section#specs
+        h2 Specs
+        table
+          tr
+            td Blabla
+            td Bla
+
+      // Reviews
+
+      // Accessories
+      section#accessories
+    
+    footer
+      small © Bose Corporation 2017
+      
