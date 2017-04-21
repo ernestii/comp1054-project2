@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(reset.css);
 @import url(https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i);
 body {
@@ -15,7 +16,8 @@ h1 {
 h2 {
   font-weight: 500;
   font-size: 36px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
 
 * {
   box-sizing: border-box; }
@@ -23,7 +25,8 @@ h2 {
 body {
   font-family: Chivo;
   font-weight: 300;
-  background: #fafafa; }
+  background: #fafafa;
+  font-size: 16px; }
 
 header {
   background: #111;
@@ -48,7 +51,7 @@ header {
         padding: 0 20px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 14px; }
+        font-size: 0.8em; }
         header nav li a:hover {
           background: #333; }
   header .search {
@@ -63,7 +66,7 @@ header {
       background: #000;
       color: #fff;
       font-family: Chivo;
-      font-size: 14px;
+      font-size: 0.8em;
       font-weight: 300; }
       header .search input:hover {
         background-color: #333; }
@@ -78,40 +81,214 @@ main {
   main #photo {
     width: 50%;
     background-color: #fff;
-    min-height: 90vh;
-    background-image: url(../images/navy.jpg);
+    min-height: 500px;
+    height: 80vh;
+    background-image: url(../images/product/navy.jpg);
     background-position: center bottom;
-    background-size: cover; }
+    background-repeat: no-repeat;
+    background-size: contain; }
   main #buy {
     width: 50%;
     background: #eaeaea;
-    min-height: 90vh;
+    min-height: 500px;
+    height: 80vh;
     padding: 30px;
     position: relative; }
+    main #buy article p {
+      font-size: 1.2em; }
+    main #buy h3 {
+      opacity: 0.6;
+      font-size: 0.7em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 20px 0 5px; }
+    main #buy fieldset {
+      display: inline-block;
+      width: 150px; }
+      main #buy fieldset label {
+        color: #fff;
+        background: #333;
+        text-align: center;
+        line-height: 50px;
+        display: block;
+        border: 4px solid transparent; }
+      main #buy fieldset input[type=radio] {
+        display: none; }
+    main #buy input:checked + label {
+      border-color: #19b855; }
+    main #buy input[value="black"] + label {
+      background: #333; }
+    main #buy input[value="navy"] + label {
+      background: #003764; }
+    main #buy .offer {
+      font-weight: 400;
+      line-height: 100px;
+      background: #fff;
+      border-top: 1px solid #ccc;
+      margin-top: 50px; }
+      main #buy .offer .price {
+        font-size: 2em;
+        float: left; }
+      main #buy .offer .stock {
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #19b855;
+        float: right; }
     main #buy a {
       position: absolute;
       display: block;
       bottom: 0;
       left: 0;
       right: 0;
-      background: #19b855;
+      background-color: #19b855;
       color: #fff;
       text-decoration: none;
       font-weight: 400;
       line-height: 60px;
       text-align: center; }
+      main #buy a:hover {
+        background-color: #29e670; }
   main .parallax {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     border: 0px solid #333;
     background-image: url(../images/bg.jpg);
     background-size: cover;
     background-attachment: fixed; }
+    main .parallax:nth-child(2) {
+      background-image: url(../images/bg-2.png); }
   main #overview {
     width: 100%; }
+    main #overview article {
+      max-width: 800px;
+      margin: 70px auto;
+      font-size: 1.2em;
+      line-height: 1.8; }
+      main #overview article p {
+        color: #666; }
+    main #overview aside {
+      background: #f2f2f2;
+      padding: 70px 0; }
+      main #overview aside ul {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap; }
+        main #overview aside ul li {
+          width: 30%;
+          padding: 15px; }
+          main #overview aside ul li:before {
+            width: 10px;
+            height: 10px;
+            display: block;
+            content: "";
+            background: #19b855;
+            border-radius: 100%;
+            margin-bottom: 10px; }
+  main #specs {
+    width: 100%;
+    padding: 70px 0; }
+    main #specs table {
+      width: 50%;
+      margin: 30px auto; }
+      main #specs table td {
+        padding: 5px; }
+  main #reviews {
+    width: 100%;
+    padding: 70px 0;
+    background: #fff; }
+    main #reviews blockquote {
+      max-width: 700px;
+      margin: 0 auto; }
+      main #reviews blockquote h3 {
+        font-size: 1.2em;
+        font-weight: 400; }
+      main #reviews blockquote p {
+        margin: 10px 0;
+        line-height: 1.8; }
+      main #reviews blockquote cite {
+        font-style: italic; }
+        main #reviews blockquote cite:before {
+          content: " — "; }
+        main #reviews blockquote cite time {
+          font-size: 0.8em;
+          opacity: 0.6; }
+  main #accessories {
+    width: 100%;
+    padding: 70px 0;
+    background: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    main #accessories h2 {
+      width: 100%; }
+    main #accessories .accessory {
+      background: #fff;
+      width: 300px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 0 30px;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all ease 0.3s; }
+      main #accessories .accessory:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transform: scale(1.03); }
+      main #accessories .accessory img {
+        margin-top: 20px;
+        max-width: 100%; }
+      main #accessories .accessory h3 {
+        margin: 15px 0;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #111; }
+      main #accessories .accessory .buy {
+        background: #19b855;
+        color: #fff;
+        margin: 0 -30px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-around; }
+        main #accessories .accessory .buy .price {
+          width: 50%;
+          font-size: 1.2em;
+          font-weight: 500;
+          line-height: 34px; }
+          main #accessories .accessory .buy .price small {
+            font-size: 0.7em; }
+        main #accessories .accessory .buy a {
+          background: #fff;
+          color: #19b855;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0 30px;
+          height: 34px;
+          line-height: 34px;
+          border-radius: 100px; }
 
 footer {
-  background: #111; }
+  background: #111;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center; }
+  footer small {
+    display: block;
+    color: #888; }
+
+small {
+  font-size: 0.8em; }
+
+ul.rating li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-size: 20px; }
+  ul.rating li.off {
+    background-image: url(../images/rating/off.png); }
+  ul.rating li.on {
+    background-image: url(../images/rating/on.png); }
 
 #__bs_notify__ {
   display: none !important; }

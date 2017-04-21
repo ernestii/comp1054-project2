@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset="utf8")
-    title Project 2
+    title SoundTrue around-ear headphones II
     link(rel="stylesheet" href="css/style.css")
   body
     // Header
@@ -22,49 +22,128 @@ html
 
     main
       section#photo
-        // Photo
+
       section#buy
-        // Basic description and Buy button
-        h1 SoundTrue around-ear headphones II
-        p Engineered for your music. Designed for your style.
+        // Basic description
+        article
+          h1 SoundTrue around-ear headphones II
+
+          p Engineered for your music. Designed for your style.
+
         // Rating
         .rating
-          h3 Customers rating
-          p * * * * -
+          h3 Customer rating
+          ul.rating
+            li.on
+            li.on
+            li.on
+            li.on
+            li.off
 
         // Choose color
-        fieldset.color
-          input(type="radio" name="color" value="black" id="black")
-          label(for="black") Charcoal Black
+        h3 Color
+        fieldset.black
+          input(type="radio" name="color" value="black" id="set-black")
+          label(for="set-black") Charcoal Black
 
-          input(type="radio" name="color" value="navy" id="navy")
-          label(for="navy") Navy Blue
+        fieldset.navy
+          input(type="radio" name="color" value="navy" id="set-navy")
+          label(for="set-navy") Navy Blue
+
         // Price
-        .price
-          p $99.95
-          p In stock
+        .offer
+          .price <small>$</small>99.95
+          .stock In stock
         
-        a(href="buy") Buy now
+          a(href="buy") Buy now
 
       section.parallax
 
       // Overview
       section#overview
-        h2 Overview
+        article
+          h2 Overview
+          p Presenting the around-ear headphones that focus your music inward while proclaiming your style to the world. SoundTrue headphones II bring your music to life with depth and clarity that many headphones can’t deliver. And they’re redesigned with a slimmer profile and fresh, new colors.
+          p Featuring a softly padded headband and memory foam to cushion around your ears, they’re so light and comfortable you just might forget you’re wearing them. Yet they’re durable enough to survive your busy life, and include a matching carrying case.
+        
+        aside
+          h2 Features
+          ul
+            li Inline microphone and remote for easy switching between calls and music with select iPhone models
+            li Music sounds deep, clear and lifelike thanks to proprietary Bose® technologies
+            li Redesigned with a slimmer profile and fresh, new colors
+            li Softly padded headband, memory-foam cushions for long-term comfort
+            li Fold-flat earcups, matching carrying case for easy travel
+            
+      
+
+      section.parallax(style="background-image: url(../images/bg-2.png)")
+
 
       // Specs
       section#specs
         h2 Specs
         table
           tr
-            td Blabla
-            td Bla
+            td Frequency range
+            td 6 Hz — 25000 KHz
+          tr
+            td Dimensions/weight
+            td 7.5" H x 6.0" W x 1.5" D (6.5 oz)
 
       // Reviews
+      section#reviews
+        h2 Reviews
+
+        blockquote
+          ul.rating
+            li.on
+            li.on
+            li.on
+            li.on
+            li.off
+          h3 As usual, Another Awesome product by Bose
+          p As a serious Bose fan, I bought a new pair of the SoundTrue II Headphones. I really did not need them, but I thought to myself...........These are Bose ! How can I go wrong ? I didn't go wrong ! I loved them ! Took them with me on a cross country road trip with some friends. When I wasn't driving, I was jamming out ! A few of the guys decided they wanted to check out my headphones. They fell in love with them ! So, on our trip 3 extra sets of headphones were bought ! The only way I see it is that I will always stay with Bose for my music listening needs ! Thank You for an excellent product !
+          cite
+            span John Smith
+            time(datetime="2016-12-21T19:00") 4 months ago
 
       // Accessories
       section#accessories
+        h2 Accessories
+        
+        article.accessory
+          img(src="images/case.png" alt="SoundTrue® Around-Ear II Carry Case")
+          h3 SoundTrue® Around-Ear II Carry Case
+          section.buy
+            .price <small>$</small>14.95
+            a(href="#") Shop
+        
+        article.accessory
+          img(src="images/accessories/cable.png" alt="SoundTrue® Around-Ear II Carry Case")
+          h3 SoundTrue® headphones inline mic/remote cable
+          section.buy
+            .price <small>$</small>29.95
+            a(href="#") Shop
+        
+        article.accessory
+          img(src="images/accessories/cushion.png" alt="SoundTrue® Around-Ear II Carry Case")
+          h3 SoundTrue® around-ear headphones II ear cushion kit
+          section.buy
+            .price <small>$</small>24.95
+            a(href="#") Shop
     
     footer
       small © Bose Corporation 2017
-      
+      small 200336022 | Icons by Icons8.com
+    
+
+    dialog#buy
+      h2 Buy
+      form(action="" method="POST")
+        fieldset
+          label Name
+          input
+        input(type="submit")
+
+    script(src="js/main.js")

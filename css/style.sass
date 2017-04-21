@@ -9,6 +9,7 @@ body
   font-family: Chivo
   font-weight: 300
   background: #fafafa
+  font-size: 16px
 
 header
   background: #111
@@ -38,7 +39,7 @@ header
         padding: 0 20px
         text-transform: uppercase
         letter-spacing: 1px
-        font-size: 14px
+        font-size: 0.8em
         &:hover
           background: #333
 
@@ -54,7 +55,7 @@ header
       background: #000
       color: #fff
       font-family: Chivo
-      font-size: 14px
+      font-size: 0.8em
       font-weight: 300
       &:hover
         background-color: #333
@@ -71,49 +72,240 @@ main
   #photo
     width: 50%
     background-color: #fff
-    min-height: 90vh
-    background-image: url(../images/navy.jpg)
+    min-height: 500px
+    height: 80vh
+    background-image: url(../images/product/navy.jpg)
     background-position: center bottom
-    background-size: cover
+    background-repeat: no-repeat
+    background-size: contain
 
 
   #buy
     width: 50%
     background: #eaeaea
-    min-height: 90vh
+    min-height: 500px
+    height: 80vh
     padding: 30px
     position: relative
+
+    article p
+      font-size: 1.2em
+
+    h3
+      opacity: .6
+      font-size: 0.7em
+      letter-spacing: 1px
+      text-transform: uppercase
+      margin: 20px 0 5px
+
+    // Radio
+    fieldset
+      display: inline-block
+      width: 150px
+      label
+        color: #fff
+        background: #333
+        text-align: center
+        line-height: 50px
+        display: block
+        border: 4px solid transparent
+      input[type=radio]
+        display: none
+  
+
+    input:checked + label
+      border-color: #19b855
+
+    input[value="black"] + label
+      background: #333
+
+    input[value="navy"] + label
+      background: #003764
+    
+    .offer
+      font-weight: 400
+      line-height: 100px
+      background: #fff
+      border-top: 1px solid #ccc
+      margin-top: 50px
+      .price
+        font-size: 2em
+        float: left
+      .stock
+        font-size: 0.9em
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #19b855
+        float: right
+    
     a
       position: absolute
       display: block
       bottom: 0
       left: 0
       right: 0
-      background: #19b855
+      background-color: #19b855
       color: #fff
       text-decoration: none
       font-weight: 400
       line-height: 60px
       text-align: center
+      &:hover
+        background-color: #29e670
   
   .parallax
     width: 100%
-    height: 100vh
+    height: 70vh
     border: 0px solid #333
     background-image: url(../images/bg.jpg)
     background-size: cover
     background-attachment: fixed
-  
+    &:nth-child(2)
+      background-image: url(../images/bg-2.png)
+
   #overview
     width: 100%
 
+    article
+      max-width: 800px
+      margin: 70px auto
+      font-size: 1.2em
+      line-height: 1.8
+      p
+        color: #666
+    
+    aside
+      background: #f2f2f2
+      padding: 70px 0
+      ul
+        max-width: 900px
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        li
+          width: 30%
+          padding: 15px
+          &:before
+            width: 10px
+            height: 10px
+            display: block
+            content: ''
+            background: #19b855
+            border-radius: 100%
+            margin-bottom: 10px
+
+    
+  
+  #specs
+    width: 100%
+    padding: 70px 0
+    table
+      width: 50%
+      margin: 30px auto
+      td
+        padding: 5px
+  
+  #reviews
+    width: 100%
+    padding: 70px 0
+    background: #fff
+    blockquote
+      max-width: 700px
+      margin: 0 auto
+      h3
+        font-size: 1.2em
+        font-weight: 400
+      p
+        margin: 10px 0
+        line-height: 1.8
+      cite
+        font-style: italic
+        &:before
+          content: ' — '
+        time
+          font-size: 0.8em
+          opacity: .6
+
+  #accessories
+    width: 100%
+    padding: 70px 0
+    background: #f8f8f8
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    h2
+      width: 100%
+      
+    .accessory
+      background: #fff
+      width: 300px
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1)
+      padding: 0 30px
+      border-radius: 4px
+      overflow: hidden
+
+      transition: all ease 0.3s
+      &:hover
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3)
+        transform: scale(1.03)
+      img
+        margin-top: 20px
+        max-width: 100%
+      h3
+        margin: 15px 0
+        font-size: 1em
+        font-weight: 500
+        line-height: 1.4
+        color: #111
+      .buy
+        background: #19b855
+        color: #fff
+        margin: 0 -30px
+        padding: 10px 30px
+        display: flex
+        justify-content: space-around
+        .price
+          width: 50%
+          font-size: 1.2em
+          font-weight: 500
+          line-height: 34px
+          small
+            font-size: .7em
+        a
+          background: #fff
+          color: #19b855
+          text-decoration: none
+          font-weight: 500
+          padding: 0 30px
+          height: 34px
+          line-height: 34px
+          border-radius: 100px
+
 footer
   background: #111
+  color: #fff
+  padding: 50px 0
+  text-align: center
+  small
+    display: block
+    color: #888
 
-main
 
+small
+  font-size: 0.8em
 
-
+// Rating
+ul.rating
+  li
+    display: inline-block
+    width: 20px
+    height: 20px
+    background-position: center center
+    background-size: 20px
+    &.off
+      background-image: url(../images/rating/off.png)
+    &.on
+      background-image: url(../images/rating/on.png)
 
 // Browsersync
 #__bs_notify__
