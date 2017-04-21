@@ -94,6 +94,8 @@ main {
     height: 80vh;
     padding: 30px;
     position: relative; }
+    main #buy h2 {
+      text-align: left; }
     main #buy article p {
       font-size: 1.2em; }
     main #buy h3 {
