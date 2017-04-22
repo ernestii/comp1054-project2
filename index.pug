@@ -29,7 +29,7 @@ html(lang="en")
           h2 SoundTrue around-ear headphones II
 
           p Engineered for your music. Designed for your style.
-
+        
         // Rating
         .rating
           h3 Customer rating
@@ -40,22 +40,34 @@ html(lang="en")
             li.on
             li.off
 
-        // Choose color
-        h3 Color
-        fieldset.black
-          input(type="radio" name="color" value="black" id="set-black")
-          label(for="set-black") Charcoal Black
+          
+        form(action="cart.php" method="post")
+          // Choose color
+          h3 Color
+          fieldset.black
+            input(type="radio" name="color" value="black" id="set-black")
+            label(for="set-black") Charcoal Black
 
-        fieldset.navy
-          input(type="radio" name="color" value="navy" id="set-navy")
-          label(for="set-navy") Navy Blue
+          fieldset.navy
+            input(type="radio" name="color" value="navy" id="set-navy" checked)
+            label(for="set-navy") Navy Blue
+          
+          h3 Qty
+          fieldset
+            select(name="qty")
+              option(value="1" selected) 1
+              option(value="2") 2
+              option(value="3") 3
+              option(value="4") 4
+              option(value="5") 5
+              option(value="6") 6
 
-        // Price
-        .offer
-          .price <small>$</small>99.95
-          .stock In stock
-        
-          a(href="buy") Buy now
+          // Price
+          .offer
+            .price <small>$</small>99.95
+            .stock 6 left in stock
+          
+            input(type="submit" value="Add to cart")
 
       section.parallax
 
@@ -136,14 +148,5 @@ html(lang="en")
     footer
       small © Bose Corporation 2017
       small 200336022 | Icons by Icons8.com
-    
-
-    #form-buy
-      h2 Buy
-      form(action="handler.php" method="POST")
-        fieldset
-          label Name
-          input
-        input(type="submit")
 
     script(src="js/main.js")

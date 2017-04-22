@@ -44,21 +44,35 @@
             <li class="off"></li>
           </ul>
         </div>
-        <!-- Choose color-->
-        <h3>Color</h3>
-        <fieldset class="black">
-          <input type="radio" name="color" value="black" id="set-black">
-          <label for="set-black">Charcoal Black</label>
-        </fieldset>
-        <fieldset class="navy">
-          <input type="radio" name="color" value="navy" id="set-navy">
-          <label for="set-navy">Navy Blue</label>
-        </fieldset>
-        <!-- Price-->
-        <div class="offer">
-          <div class="price"><small>$</small>99.95</div>
-          <div class="stock">In stock</div><a href="buy">Buy now</a>
-        </div>
+        <form action="cart.php" method="post">
+          <!-- Choose color-->
+          <h3>Color</h3>
+          <fieldset class="black">
+            <input type="radio" name="color" value="black" id="set-black">
+            <label for="set-black">Charcoal Black</label>
+          </fieldset>
+          <fieldset class="navy">
+            <input type="radio" name="color" value="navy" id="set-navy" checked>
+            <label for="set-navy">Navy Blue</label>
+          </fieldset>
+          <h3>Qty</h3>
+          <fieldset>
+            <select name="qty">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </fieldset>
+          <!-- Price-->
+          <div class="offer">
+            <div class="price"><small>$</small>99.95</div>
+            <div class="stock">6 left in stock</div>
+            <input type="submit" value="Add to cart">
+          </div>
+        </form>
       </section>
       <section class="parallax"></section>
       <!-- Overview-->
@@ -136,16 +150,6 @@
       </section>
     </main>
     <footer><small>© Bose Corporation 2017</small><small>200336022 | Icons by Icons8.com</small></footer>
-    <div id="form-buy">
-      <h2>Buy</h2>
-      <form action="handler.php" method="POST">
-        <fieldset>
-          <label>Name</label>
-          <input>
-        </fieldset>
-        <input type="submit">
-      </form>
-    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
