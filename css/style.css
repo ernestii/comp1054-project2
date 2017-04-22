@@ -34,10 +34,12 @@ input {
   font-family: Chivo;
   font-size: 1em; }
 
+/* Header */
 header {
   background: #111;
   line-height: 60px;
-  display: flex; }
+  display: flex;
+  /* Logo */ }
   header .logo {
     width: 20%;
     margin-left: 20px; }
@@ -45,6 +47,7 @@ header {
       vertical-align: middle;
       width: 140px; }
 
+/* Menu */
 nav {
   width: 60%;
   text-align: center; }
@@ -61,6 +64,7 @@ nav {
       nav li a:hover {
         background: #333; }
 
+/* Search */
 header .search {
   width: 20%; }
   header .search input {
@@ -81,10 +85,12 @@ header .search {
       color: #000;
       outline: none; }
 
+/* Main content */
 main {
   display: flex;
   flex-wrap: wrap; }
 
+/* Product photo */
 #photo {
   width: 50%;
   background-color: #fff;
@@ -95,12 +101,14 @@ main {
   background-repeat: no-repeat;
   background-size: contain; }
 
+/* Add to cart form */
 #buy {
   width: 50%;
   background: #eaeaea;
   min-height: 580px;
   padding: 30px;
-  position: relative; }
+  position: relative;
+  /* Color switcher */ }
   #buy h2 {
     text-align: left;
     line-height: 1.3; }
@@ -163,6 +171,7 @@ main {
     #buy input[type="submit"]:hover {
       background-color: #29e670; }
 
+/* Parallax image */
 .parallax {
   width: 100%;
   height: 70vh;
@@ -202,6 +211,7 @@ main {
           border-radius: 100%;
           margin-bottom: 10px; }
 
+/* Specs */
 #specs {
   width: 100%;
   padding: 70px 0; }
@@ -211,6 +221,7 @@ main {
     #specs table td {
       padding: 5px; }
 
+/* Reviews */
 #reviews {
   width: 100%;
   padding: 70px 0;
@@ -233,6 +244,7 @@ blockquote {
       font-size: 0.8em;
       opacity: 0.6; }
 
+/* Accessories */
 #accessories {
   width: 100%;
   padding: 70px 0;
@@ -281,6 +293,7 @@ blockquote {
       line-height: 34px;
       border-radius: 100px; }
 
+/* Footer */
 footer {
   background: #111;
   color: #fff;
@@ -290,6 +303,7 @@ footer {
     display: block;
     color: #888; }
 
+/* Rating */
 ul.rating li {
   display: inline-block;
   width: 20px;
@@ -301,10 +315,12 @@ ul.rating li {
   ul.rating li.on {
     background-image: url(../images/rating/on.png); }
 
+/* Responsive */
 @media screen and (max-width: 900px) {
   body {
     font-size: 12px; }
 
+  /* Hide nav (todo: hamburger menu) */
   header nav {
     display: none; }
 

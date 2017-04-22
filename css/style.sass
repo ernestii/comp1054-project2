@@ -34,13 +34,13 @@ input
   font-family: Chivo
   font-size: 1em
 
-// Header
+/* Header */
 header
   background: #111
   line-height: 60px
   display: flex
   
-  // Logo
+  /* Logo */
   .logo
     width: 20%
     margin-left: 20px
@@ -48,7 +48,7 @@ header
       vertical-align: middle
       width: 140px
 
-// Menu
+/* Menu */
 nav
   width: 60%
   text-align: center
@@ -65,7 +65,7 @@ nav
       &:hover
         background: #333
 
-// Search
+/* Search */
 header .search
   width: 20%
   input
@@ -87,12 +87,12 @@ header .search
       outline: none
 
 
-// Main content
+/* Main content */
 main
   display: flex
   flex-wrap: wrap
 
-// Product photo
+/* Product photo */
 #photo
   width: 50%
   background-color: #fff
@@ -103,7 +103,7 @@ main
   background-repeat: no-repeat
   background-size: contain
 
-// Add to cart form
+/* Add to cart form */
 #buy
   width: 50%
   background: #eaeaea
@@ -118,7 +118,7 @@ main
   article p
     font-size: 1.2em
 
-  // Color switcher
+  /* Color switcher */
   fieldset
     display: inline-block
     width: 150px
@@ -182,6 +182,8 @@ main
     &:hover
       background-color: #29e670
 
+
+/* Parallax image */
 .parallax
   width: 100%
   height: 70vh
@@ -223,7 +225,7 @@ main
           border-radius: 100%
           margin-bottom: 10px
 
-// Specs
+/* Specs */
 #specs
   width: 100%
   padding: 70px 0
@@ -233,7 +235,7 @@ main
     td
       padding: 5px
 
-// Reviews
+/* Reviews */
 #reviews
   width: 100%
   padding: 70px 0
@@ -256,7 +258,7 @@ blockquote
       font-size: 0.8em
       opacity: .6
 
-// Accessories
+/* Accessories */
 #accessories
   width: 100%
   padding: 70px 0
@@ -266,7 +268,8 @@ blockquote
   justify-content: space-around
   h2
     width: 100%
-    
+  
+
 .accessory
   background: #fff
   width: 300px
@@ -307,6 +310,7 @@ blockquote
       line-height: 34px
       border-radius: 100px
 
+/* Footer */
 footer
   background: #111
   color: #fff
@@ -316,7 +320,7 @@ footer
     display: block
     color: #888
 
-// Rating
+/* Rating */
 ul.rating
   li
     display: inline-block
@@ -329,11 +333,13 @@ ul.rating
     &.on
       background-image: url(../images/rating/on.png)
 
-// Responsive
+
+/* Responsive */
 @media screen and (max-width: 900px)
   body
     font-size: 12px
 
+  /* Hide nav (todo: hamburger menu) */
   header nav
     display: none
   
