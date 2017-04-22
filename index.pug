@@ -7,6 +7,7 @@ html(lang="en")
   body
     // Header
     header: .container
+      // Logo
       .logo
         a(href="/"): img(src="images/logo.svg" alt="Bose")
       // Navigation
@@ -19,15 +20,17 @@ html(lang="en")
       // Search
       .search
         input(type="text" placeholder="Search...")
-
+    
+    // Main content
     main
+      // Photo of product
       section#photo
 
+      // Main information and add to cart form
       section#buy
         // Basic description
         article
           h2 SoundTrue around-ear headphones II
-
           p Engineered for your music. Designed for your style.
         
         // Rating
@@ -40,7 +43,7 @@ html(lang="en")
             li.on
             li.off
 
-          
+        // Add to cart form
         form(action="cart.php" method="post")
           // Choose color
           h3 Color
@@ -52,6 +55,7 @@ html(lang="en")
             input(type="radio" name="color" value="navy" id="set-navy" checked)
             label(for="set-navy") Navy Blue
           
+          // Quantity
           h3 Qty
           fieldset
             select(name="qty")
@@ -66,9 +70,11 @@ html(lang="en")
           .offer
             .price <small>$</small>99.95
             .stock 6 left in stock
-          
+            
+            // Add to cart button
             input(type="submit" value="Add to cart")
-
+      
+      // Parallax image
       section.parallax
 
       // Overview
@@ -88,7 +94,7 @@ html(lang="en")
             li Fold-flat earcups, matching carrying case for easy travel
             
       
-
+      // Parallax image
       section.parallax(style="background-image: url(../images/bg-2.png)")
 
 
@@ -108,12 +114,14 @@ html(lang="en")
         h2 Reviews
 
         blockquote
+          // Rating
           ul.rating
             li.on
             li.on
             li.on
             li.on
             li.off
+
           h3 As usual, Another Awesome product by Bose
           p As a serious Bose fan, I bought a new pair of the SoundTrue II Headphones. I really did not need them, but I thought to myself...........These are Bose ! How can I go wrong ? I didn't go wrong ! I loved them ! Took them with me on a cross country road trip with some friends. When I wasn't driving, I was jamming out ! A few of the guys decided they wanted to check out my headphones. They fell in love with them ! So, on our trip 3 extra sets of headphones were bought ! The only way I see it is that I will always stay with Bose for my music listening needs ! Thank You for an excellent product !
           cite
@@ -145,6 +153,7 @@ html(lang="en")
             .price <small>$</small>24.95
             a(href="#") Shop
     
+    // Footer
     footer
       small © Bose Corporation 2017
       small 200336022 | Icons by Icons8.com
